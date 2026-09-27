@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tambah Pengeluaran - Catatan Pengeluaran</title>
+<!-- Tailwind CSS with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-variant": "#e0e3e1", "tertiary-fixed-dim": "#ffb598", "secondary-fixed": "#c8e9e4", "on-primary-container": "#a3faef", "outline-variant": "#bdc9c6", "surface-container-highest": "#e0e3e1", "primary-fixed": "#9cf2e8", "on-error": "#ffffff", primary: "#005c55", "surface-container-low": "#f1f4f3", "on-surface": "#181c1c", surface: "#f7faf8", "on-background": "#181c1c", "on-surface-variant": "#3e4947", "surface-container-high": "#e5e9e7", "secondary-fixed-dim": "#accdc8", "on-primary-fixed": "#00201d", background: "#f7faf8", "surface-container": "#ebefed", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#ffe5db", "on-secondary-fixed": "#00201d", "tertiary-fixed": "#ffdbce", error: "#ba1a1a", tertiary: "#7f4025", "on-tertiary-fixed-variant": "#72361b", "on-secondary": "#ffffff", "primary-container": "#0f766e", "on-error-container": "#93000a", "primary-fixed-dim": "#80d5cb", "on-tertiary-fixed": "#370e00", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#2e4c48", "inverse-surface": "#2d3130", "tertiary-container": "#9c573a", "on-secondary-container": "#4a6864", "surface-bright": "#f7faf8", "on-primary-fixed-variant": "#00504a", outline: "#6e7977", "surface-dim": "#d7dbd9", "on-primary": "#ffffff", "inverse-on-surface": "#eef1f0", secondary: "#466460", "secondary-container": "#c5e6e1", "inverse-primary": "#80d5cb", "surface-tint": "#006a63", "error-container": "#ffdad6"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"space-lg": "1.5rem", "space-xl": "2rem", gutter: "1rem", "space-xs": "0.25rem", "space-md": "1rem", margin: "1rem", "space-sm": "0.5rem"}, fontFamily: {"headline-md": ["Inter"], "display-currency": ["Inter"], "headline-lg": ["Inter"], "body-sm": ["Inter"], "label-lg": ["Inter"], "headline-sm": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {"headline-md": ["20px", {lineHeight: "28px", fontWeight: "600"}], "display-currency": ["32px", {lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-lg": ["24px", {lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700"}], "body-sm": ["12px", {lineHeight: "16px", fontWeight: "400"}], "label-lg": ["14px", {lineHeight: "20px", fontWeight: "600"}], "headline-sm": ["16px", {lineHeight: "24px", fontWeight: "600"}], "label-sm": ["10px", {lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600"}], "body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}], "label-md": ["12px", {lineHeight: "16px", fontWeight: "500"}]}}}};</script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-slate-50 text-on-surface antialiased min-h-screen flex justify-center selection:bg-primary-container selection:text-white">
+<!-- Mobile Viewport Canvas (390px fixed mobile container) -->
+<main class="w-full max-w-[390px] min-h-screen bg-slate-50 flex flex-col shadow-xl relative border-x border-outline-variant/30">
+<!-- App Header (Linear Task-Focused: Back Navigation, bottom navigation is suppressed per Semantic Shell rules) -->
+<header class="sticky top-0 z-40 flex items-center justify-between h-14 px-4 bg-surface-container-lowest border-b border-outline-variant/40 shadow-sm">
+<div class="flex items-center gap-3">
+<a aria-label="Kembali ke Beranda" class="flex items-center justify-center w-10 h-10 -ml-2 rounded-full text-on-surface hover:bg-surface-container-high transition-colors active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</a>
+<h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">
+          Tambah Pengeluaran
+        </h1>
+</div>
+<div class="flex items-center">
+<button aria-label="Bantuan Form" class="flex items-center justify-center w-9 h-9 rounded-full text-secondary hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">help_outline</span>
+</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<div class="p-space-md flex-1 flex flex-col gap-space-lg">
+<!-- Expense Form Card -->
+<form class="bg-surface-container-lowest border border-outline-variant rounded-lg p-space-md shadow-sm flex flex-col gap-space-md" id="expenseForm">
+<!-- Field 1: Judul Pengeluaran -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center gap-1" for="expenseTitle">
+            Judul Pengeluaran <span class="text-error font-bold">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 px-4 rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-secondary/60 focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all outline-none" id="expenseTitle" name="title" placeholder="Contoh: Makan Siang" required="" type="text"/>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Masukkan deskripsi singkat pengeluaran Anda.</p>
+</div>
+<!-- Field 2: Nominal (Rp) - Unformatted per REST API Spec -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between" for="expenseAmount">
+<span class="flex items-center gap-1">
+              Nominal (Rp) <span class="text-error font-bold">*</span>
+</span>
+<span class="font-label-sm text-label-sm text-primary-container font-semibold tracking-wide bg-secondary-fixed/50 px-2 py-0.5 rounded">REST API NUMBER</span>
+</label>
+<div class="relative flex items-center">
+<div class="absolute left-0 pl-4 flex items-center pointer-events-none">
+<span class="font-headline-sm text-headline-sm text-secondary font-semibold">Rp</span>
+</div>
+<input class="w-full h-12 pl-12 pr-4 rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface font-body-lg text-body-lg font-semibold placeholder:text-secondary/40 focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all outline-none [appearance:textfield] [&amp;::-webkit-outer-spin-button]:appearance-none [&amp;::-webkit-inner-spin-button]:appearance-none" id="expenseAmount" inputmode="numeric" name="amount" placeholder="25000" required="" type="number"/>
+</div>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[14px]">info</span>
+<p class="font-body-sm text-body-sm">Hanya angka, contoh: 25000 tanpa titik/koma</p>
+</div>
+</div>
+<!-- Field 3: Category Selection -->
+<div class="flex flex-col gap-2 pt-1">
+<label class="font-label-lg text-label-lg text-on-surface">Pilih Kategori</label>
+<!-- Category Chips / Radio Group -->
+<div aria-label="Pilih Kategori" class="grid grid-cols-2 gap-2" role="radiogroup">
+<!-- Category: Tanpa Kategori (Unselected) -->
+<label class="category-chip cursor-pointer relative flex items-center justify-between h-11 px-3.5 rounded-lg border border-outline-variant bg-slate-100/90 text-slate-700 hover:bg-slate-200/70 transition-colors active:scale-95 duration-150">
+<input class="sr-only" name="category" type="radio" value="tanpa_kategori"/>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">label_off</span>
+<span class="font-label-md text-label-md">Tanpa kategori</span>
+</div>
+<span class="check-indicator hidden material-symbols-outlined text-[18px] text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</label>
+<!-- Category: Makanan (Selected Active State) -->
+<label class="category-chip cursor-pointer relative flex items-center justify-between h-11 px-3.5 rounded-lg border border-primary-container bg-blue-100/70 text-blue-800 shadow-sm transition-all active:scale-95 duration-150">
+<input checked="" class="sr-only" name="category" type="radio" value="makanan"/>
+<div class="flex items-center gap-2 font-semibold">
+<span class="material-symbols-outlined text-[18px] text-primary-container" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<span class="font-label-md text-label-md">Makanan</span>
+</div>
+<span class="check-indicator material-symbols-outlined text-[18px] text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</label>
+<!-- Category: Transport (Unselected) -->
+<label class="category-chip cursor-pointer relative flex items-center justify-between h-11 px-3.5 rounded-lg border border-outline-variant bg-slate-100/90 text-slate-700 hover:bg-slate-200/70 transition-colors active:scale-95 duration-150">
+<input class="sr-only" name="category" type="radio" value="transport"/>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">commute</span>
+<span class="font-label-md text-label-md">Transport</span>
+</div>
+<span class="check-indicator hidden material-symbols-outlined text-[18px] text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</label>
+<!-- Category: Pendidikan (Unselected) -->
+<label class="category-chip cursor-pointer relative flex items-center justify-between h-11 px-3.5 rounded-lg border border-outline-variant bg-slate-100/90 text-slate-700 hover:bg-slate-200/70 transition-colors active:scale-95 duration-150">
+<input class="sr-only" name="category" type="radio" value="pendidikan"/>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">school</span>
+<span class="font-label-md text-label-md">Pendidikan</span>
+</div>
+<span class="check-indicator hidden material-symbols-outlined text-[18px] text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</label>
+</div>
+</div>
+<!-- Field 4: Server Note / Backend Helper Notice -->
+<div class="mt-1 rounded-lg bg-surface-container-low border border-outline-variant/60 p-3.5 flex items-start gap-3">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">cloud_sync</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<h4 class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5">
+              Tanggal otomatis dari server
+            </h4>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+              Waktu pencatatan akan digenerate otomatis oleh backend API saat transaksi disimpan.
+            </p>
+</div>
+</div>
+<!-- Action Buttons Cluster -->
+<div class="flex flex-col gap-2.5 pt-3">
+<!-- Primary Submit Button -->
+<button class="w-full h-12 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] transition-all duration-150" type="submit">
+<span class="material-symbols-outlined text-[20px]">save</span>
+<span>Simpan</span>
+</button>
+<!-- Secondary Cancel Action -->
+<a class="w-full h-12 rounded-lg bg-transparent text-secondary hover:bg-surface-container-high/60 font-label-lg text-label-lg font-medium flex items-center justify-center active:scale-[0.98] transition-all duration-150" href="#">
+            Batal
+          </a>
+</div>
+</form>
+<!-- Micro Budget Hint Info Card -->
+<div class="rounded-lg border border-outline-variant/60 bg-surface-container-lowest p-3.5 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2.5">
+<div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
+<span class="font-body-sm text-body-sm text-secondary">Status Sinkronisasi API</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-primary-container">Terhubung</span>
+</div>
+</div>
+</main>
+<!-- Interactive script for dynamic category chip state transitions -->
+<script>
+    document.querySelectorAll('.category-chip input[type="radio"]').forEach(radio => {
+      radio.addEventListener('change', function() {
+        document.querySelectorAll('.category-chip').forEach(chip => {
+          chip.classList.remove('border-primary-container', 'bg-blue-100/70', 'text-blue-800', 'font-semibold', 'shadow-sm');
+          chip.classList.add('border-outline-variant', 'bg-slate-100/90', 'text-slate-700');
+          const check = chip.querySelector('.check-indicator');
+          if (check) check.classList.add('hidden');
+          const icon = chip.querySelector('.material-symbols-outlined:not(.check-indicator)');
+          if (icon) {
+            icon.classList.remove('text-primary-container');
+            icon.classList.add('text-secondary');
+            icon.style.fontVariationSettings = "'FILL' 0";
+          }
+        });
+
+        if (this.checked) {
+          const parent = this.closest('.category-chip');
+          parent.classList.remove('border-outline-variant', 'bg-slate-100/90', 'text-slate-700');
+          parent.classList.add('border-primary-container', 'bg-blue-100/70', 'text-blue-800', 'font-semibold', 'shadow-sm');
+          const check = parent.querySelector('.check-indicator');
+          if (check) check.classList.remove('hidden');
+          const icon = parent.querySelector('.material-symbols-outlined:not(.check-indicator)');
+          if (icon) {
+            icon.classList.remove('text-secondary');
+            icon.classList.add('text-primary-container');
+            icon.style.fontVariationSettings = "'FILL' 1";
+          }
+        }
+      });
+    });
+
+    document.getElementById('expenseForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const title = document.getElementById('expenseTitle').value;
+      const amount = document.getElementById('expenseAmount').value;
+      const category = document.querySelector('input[name="category"]:checked')?.value;
+
+      if (!title || !amount) {
+        alert('Mohon lengkapi judul dan nominal pengeluaran.');
+        return;
+      }
+
+      // Quick toast feedback simulation
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <span class="material-symbols-outlined animate-spin text-[20px]">progress_activity</span>
+        <span>Menyimpan...</span>
+      `;
+
+      setTimeout(() => {
+        submitBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[20px]">check</span>
+          <span>Tersimpan!</span>
+        `;
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }, 1500);
+      }, 800);
+    });
+  </script>
+</body></html>

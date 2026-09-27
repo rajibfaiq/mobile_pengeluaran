@@ -1,0 +1,29 @@
+# Dependencies
+**/node_modules/
+node_modules/
+
+# Expo & Build
+**/.expo/
+.expo/
+dist/
+web-build/
+
+# Environment files with sensitive credentials (optional, or keep template)
+# .env
+
+# Logs & temp
+*.log
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Archives
+*.zip
+
+# IDE & AI tools
+.claude/
+.gemini/

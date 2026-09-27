@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Detail Pengeluaran</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-variant": "#e0e3e1", "tertiary-fixed-dim": "#ffb598", "secondary-fixed": "#c8e9e4", "on-primary-container": "#a3faef", "outline-variant": "#bdc9c6", "surface-container-highest": "#e0e3e1", "primary-fixed": "#9cf2e8", "on-error": "#ffffff", primary: "#005c55", "surface-container-low": "#f1f4f3", "on-surface": "#181c1c", surface: "#f7faf8", "on-background": "#181c1c", "on-surface-variant": "#3e4947", "surface-container-high": "#e5e9e7", "secondary-fixed-dim": "#accdc8", "on-primary-fixed": "#00201d", background: "#f7faf8", "surface-container": "#ebefed", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#ffe5db", "on-secondary-fixed": "#00201d", "tertiary-fixed": "#ffdbce", error: "#ba1a1a", tertiary: "#7f4025", "on-tertiary-fixed-variant": "#72361b", "on-secondary": "#ffffff", "primary-container": "#0f766e", "on-error-container": "#93000a", "primary-fixed-dim": "#80d5cb", "on-tertiary-fixed": "#370e00", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#2e4c48", "inverse-surface": "#2d3130", "tertiary-container": "#9c573a", "on-secondary-container": "#4a6864", "surface-bright": "#f7faf8", "on-primary-fixed-variant": "#00504a", outline: "#6e7977", "surface-dim": "#d7dbd9", "on-primary": "#ffffff", "inverse-on-surface": "#eef1f0", secondary: "#466460", "secondary-container": "#c5e6e1", "inverse-primary": "#80d5cb", "surface-tint": "#006a63", "error-container": "#ffdad6"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"space-lg": "1.5rem", "space-xl": "2rem", gutter: "1rem", "space-xs": "0.25rem", "space-md": "1rem", margin: "1rem", "space-sm": "0.5rem"}, fontFamily: {"headline-md": ["Inter", "sans-serif"], "display-currency": ["Inter", "sans-serif"], "headline-lg": ["Inter", "sans-serif"], "body-sm": ["Inter", "sans-serif"], "label-lg": ["Inter", "sans-serif"], "headline-sm": ["Inter", "sans-serif"], "label-sm": ["Inter", "sans-serif"], "body-lg": ["Inter", "sans-serif"], "body-md": ["Inter", "sans-serif"], "label-md": ["Inter", "sans-serif"], mono: ["JetBrains Mono", "monospace"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {"headline-md": ["20px", {lineHeight: "28px", fontWeight: "600"}], "display-currency": ["32px", {lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-lg": ["24px", {lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700"}], "body-sm": ["12px", {lineHeight: "16px", fontWeight: "400"}], "label-lg": ["14px", {lineHeight: "20px", fontWeight: "600"}], "headline-sm": ["16px", {lineHeight: "24px", fontWeight: "600"}], "label-sm": ["10px", {lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600"}], "body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}], "label-md": ["12px", {lineHeight: "16px", fontWeight: "500"}]}}}};</script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#F8FAFC] text-on-surface antialiased flex justify-center min-h-screen">
+<!-- Mobile Device Shell: 390px fixed width representation -->
+<div class="w-full max-w-[390px] min-h-screen bg-[#F8FAFC] flex flex-col justify-between relative shadow-xl overflow-hidden pb-6">
+<!-- Top App Bar with back navigation (Focused journey suppresses bottom navigation shell) -->
+<header class="sticky top-0 z-40 flex items-center justify-between h-14 px-4 w-full bg-surface-container-lowest shadow-sm">
+<div class="flex items-center gap-3">
+<button aria-label="Kembali" class="w-10 h-10 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container-high active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">Detail Pengeluaran</h1>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="Bagikan Transaksi" class="w-10 h-10 flex items-center justify-center rounded-lg text-secondary hover:bg-surface-container-high active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</header>
+<!-- Main Content Area with 16px page margins -->
+<main class="flex-1 px-4 py-4 space-y-4">
+<!-- Main Expense Detail Card -->
+<article class="bg-surface-container-lowest border border-[#CBD5E1] rounded-lg p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04),0_1px_2px_rgba(15,23,42,0.02)]">
+<!-- Header / Main Amount section -->
+<div class="flex items-start justify-between gap-3">
+<div class="flex-1">
+<span class="inline-flex items-center gap-1 text-[11px] font-medium tracking-wide uppercase text-secondary mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+              Pengeluaran Pribadi
+            </span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface leading-tight break-words">
+              Makan Siang Nasi Padang
+            </h2>
+</div>
+<div class="w-10 h-10 rounded-full bg-[#DBEAFE] flex items-center justify-center shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[22px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+</div>
+<!-- Prominent Monetary Display -->
+<div class="mt-3.5 mb-5 flex items-baseline">
+<span class="font-display-currency text-headline-lg font-bold text-primary-container tracking-tight">
+            Rp 28.000
+          </span>
+<span class="ml-2 font-body-sm text-body-sm text-secondary">
+            (Debit Kas)
+          </span>
+</div>
+<!-- Divider line (#CBD5E1) -->
+<hr class="border-t border-[#CBD5E1] my-4">
+<!-- Read-only Metadata Pairings -->
+<div class="space-y-4">
+<!-- Tanggal Transaksi -->
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-secondary">Tanggal Transaksi</span>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">calendar_today</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">24 Oktober 2023, 12:30 WIB</span>
+</div>
+</div>
+<!-- Category ID & Name Badge -->
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-secondary">Kategori &amp; Kode</span>
+<div class="flex items-center flex-wrap gap-2 pt-0.5">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#DBEAFE] border border-blue-200 text-primary-container font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">lunch_dining</span>
+<span class="">CAT-002 • Makanan</span>
+</span>
+</div>
+</div>
+<!-- Transaction ID (Monospace Badge) -->
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-secondary">ID Transaksi (REST API)</span>
+<div class="flex items-center justify-between bg-slate-50 border border-slate-200 rounded px-2.5 py-1.5 w-full">
+<span class="font-mono text-body-sm text-on-surface font-semibold tracking-wide">#EXP-8921</span>
+<button class="text-secondary hover:text-primary-container active:scale-95 transition-transform" title="Salin ID" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<!-- Catatan / Notes (Read-only default state) -->
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-secondary">Catatan</span>
+<div class="flex items-start gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-200/80">
+<span class="material-symbols-outlined text-[18px] text-[#64748B] shrink-0 mt-0.5">format_quote</span>
+<p class="font-body-sm text-body-sm text-[#64748B] italic">Belum ada catatan</p>
+</div>
+</div>
+</div>
+</article>
+<!-- Contextual Audit Snapshot Card -->
+<aside class="bg-surface-container-lowest border border-[#CBD5E1] rounded-lg p-3.5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Tervalidasi Sinkronisasi</span>
+<span class="font-body-sm text-body-sm text-secondary">Status: Sukses di Server Cloud</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-green-600 text-[20px]">check_circle</span>
+</aside>
+</main>
+<!-- Action Buttons Section (Fixed ergonomics at bottom container with 12px gap) -->
+<footer class="px-4 pt-3 space-y-3 bg-[#F8FAFC]">
+<!-- Ubah (Primary Action) -->
+<button class="w-full min-h-[48px] h-12 bg-primary-container hover:bg-[#005c55] active:bg-[#00504a] text-white font-label-lg text-label-lg rounded-lg flex items-center justify-center gap-2 shadow-sm active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+<span class="">Ubah</span>
+</button>
+<!-- Action Grid: Hapus & Kembali -->
+<div class="grid grid-cols-2 gap-3">
+<!-- Hapus (Destructive Action) -->
+<button class="min-h-[48px] h-12 bg-white border border-[#B91C1C] text-[#B91C1C] hover:bg-[#FEE2E2] active:bg-[#FEE2E2] font-label-lg text-label-lg rounded-lg flex items-center justify-center gap-1.5 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+<span class="">Hapus</span>
+</button>
+<!-- Kembali (Secondary Neutral Action) -->
+<button class="min-h-[48px] h-12 bg-white border border-[#CBD5E1] text-[#0F172A] hover:bg-slate-50 active:bg-slate-100 font-label-lg text-label-lg rounded-lg flex items-center justify-center gap-1.5 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+<span class="">Kembali</span>
+</button>
+</div>
+</footer>
+</div>
+
+
+</body></html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Catatan Pengeluaran</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-variant": "#e0e3e1", "tertiary-fixed-dim": "#ffb598", "secondary-fixed": "#c8e9e4", "on-primary-container": "#a3faef", "outline-variant": "#bdc9c6", "surface-container-highest": "#e0e3e1", "primary-fixed": "#9cf2e8", "on-error": "#ffffff", primary: "#005c55", "surface-container-low": "#f1f4f3", "on-surface": "#181c1c", surface: "#f7faf8", "on-background": "#181c1c", "on-surface-variant": "#3e4947", "surface-container-high": "#e5e9e7", "secondary-fixed-dim": "#accdc8", "on-primary-fixed": "#00201d", background: "#f7faf8", "surface-container": "#ebefed", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#ffe5db", "on-secondary-fixed": "#00201d", "tertiary-fixed": "#ffdbce", error: "#ba1a1a", tertiary: "#7f4025", "on-tertiary-fixed-variant": "#72361b", "on-secondary": "#ffffff", "primary-container": "#0f766e", "on-error-container": "#93000a", "primary-fixed-dim": "#80d5cb", "on-tertiary-fixed": "#370e00", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#2e4c48", "inverse-surface": "#2d3130", "tertiary-container": "#9c573a", "on-secondary-container": "#4a6864", "surface-bright": "#f7faf8", "on-primary-fixed-variant": "#00504a", outline: "#6e7977", "surface-dim": "#d7dbd9", "on-primary": "#ffffff", "inverse-on-surface": "#eef1f0", secondary: "#466460", "secondary-container": "#c5e6e1", "inverse-primary": "#80d5cb", "surface-tint": "#006a63", "error-container": "#ffdad6"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"space-lg": "1.5rem", "space-xl": "2rem", gutter: "1rem", "space-xs": "0.25rem", "space-md": "1rem", margin: "1rem", "space-sm": "0.5rem"}, fontFamily: {"headline-md": ["Inter"], "display-currency": ["Inter"], "headline-lg": ["Inter"], "body-sm": ["Inter"], "label-lg": ["Inter"], "headline-sm": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {"headline-md": ["20px", {lineHeight: "28px", fontWeight: "600"}], "display-currency": ["32px", {lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-lg": ["24px", {lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700"}], "body-sm": ["12px", {lineHeight: "16px", fontWeight: "400"}], "label-lg": ["14px", {lineHeight: "20px", fontWeight: "600"}], "headline-sm": ["16px", {lineHeight: "24px", fontWeight: "600"}], "label-sm": ["10px", {lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600"}], "body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}], "label-md": ["12px", {lineHeight: "16px", fontWeight: "500"}]}}}};</script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#F8FAFC] text-on-surface antialiased min-h-screen flex justify-center selection:bg-secondary-container">
+<!-- Mobile Screen Container (390px x 844px) -->
+<div class="w-full max-w-[390px] min-h-[844px] bg-[#F8FAFC] flex flex-col relative pb-20 shadow-xl overflow-x-hidden">
+<!-- TopAppBar (from Shared Components JSON) -->
+<header class="sticky top-0 z-40 flex items-center justify-between h-14 px-4 w-full bg-surface-container-lowest dark:bg-surface shadow-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="account_balance_wallet">account_balance_wallet</span>
+<h1 class="text-headline-sm font-headline-sm font-bold text-on-surface">Catatan Pengeluaran</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors active:scale-95 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-4 pt-4 pb-6 flex flex-col gap-4">
+<!-- Summary Card (Bento/Modern Financial Accent) -->
+<section class="bg-surface-container-lowest rounded-lg p-4 border border-outline-variant shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="text-label-md font-label-md text-secondary">Total Pengeluaran Bulan Ini</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-primary font-label-sm text-label-sm">Oktober 2023</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="text-display-currency font-display-currency text-[#0F172A]">Rp 1.450.000</span>
+</div>
+<div class="flex items-center gap-2 pt-2 border-t border-outline-variant">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container" data-icon="trending_up">trending_up</span>
+<p class="text-body-sm font-body-sm text-secondary">
+            Meningkat <span class="font-semibold text-on-surface">8%</span> dibanding bulan lalu
+          </p>
+</div>
+</section>
+<!-- Top Action Buttons -->
+<section class="grid grid-cols-2 gap-3">
+<button class="h-12 min-h-[48px] bg-primary-container hover:bg-primary text-on-primary rounded-lg px-4 flex items-center justify-center gap-2 text-label-lg font-label-lg active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+<span>Tambah</span>
+</button>
+<button class="h-12 min-h-[48px] bg-surface-container-lowest hover:bg-surface-container-low border border-outline-variant text-[#0F172A] rounded-lg px-4 flex items-center justify-center gap-2 text-label-lg font-label-lg active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary" data-icon="refresh">refresh</span>
+<span>Muat ulang</span>
+</button>
+</section>
+<!-- Section Title & Counter -->
+<div class="flex items-center justify-between pt-2">
+<h2 class="text-headline-sm font-headline-sm text-[#0F172A]">Daftar Pengeluaran</h2>
+<span class="text-label-md font-label-md text-secondary">5 Transaksi</span>
+</div>
+<!-- Expense List Items -->
+<section class="flex flex-col gap-3">
+<!-- Card 1: Makan Siang Nasi Padang -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]" data-icon="restaurant">restaurant</span>
+</div>
+<div>
+<h3 class="text-body-lg font-headline-sm text-[#0F172A] leading-tight">Makan Siang Nasi Padang</h3>
+<p class="text-body-sm font-body-sm text-secondary pt-0.5">24 Okt 2023, 12:30</p>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="text-headline-sm font-headline-sm text-tertiary-container">- Rp 28.000</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-[#F1F5F9]">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-container text-primary">
+              Makanan
+            </span>
+<button class="inline-flex items-center gap-1 text-label-md font-label-md text-primary hover:text-primary-container transition-colors py-1 active:scale-95">
+<span>Lihat detail</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Bensin Motor Bulanan -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]" data-icon="local_gas_station">local_gas_station</span>
+</div>
+<div>
+<h3 class="text-body-lg font-headline-sm text-[#0F172A] leading-tight">Bensin Motor Bulanan</h3>
+<p class="text-body-sm font-body-sm text-secondary pt-0.5">23 Okt 2023, 08:15</p>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="text-headline-sm font-headline-sm text-tertiary-container">- Rp 50.000</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-[#F1F5F9]">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-container text-primary">
+              Transport
+            </span>
+<button class="inline-flex items-center gap-1 text-label-md font-label-md text-primary hover:text-primary-container transition-colors py-1 active:scale-95">
+<span>Lihat detail</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Buku Pemrograman Web -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]" data-icon="menu_book">menu_book</span>
+</div>
+<div>
+<h3 class="text-body-lg font-headline-sm text-[#0F172A] leading-tight">Buku Pemrograman Web</h3>
+<p class="text-body-sm font-body-sm text-secondary pt-0.5">21 Okt 2023, 14:00</p>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="text-headline-sm font-headline-sm text-tertiary-container">- Rp 125.000</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-[#F1F5F9]">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-container text-primary">
+              Pendidikan
+            </span>
+<button class="inline-flex items-center gap-1 text-label-md font-label-md text-primary hover:text-primary-container transition-colors py-1 active:scale-95">
+<span>Lihat detail</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- Card 4: Kopi & Camilan -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]" data-icon="local_cafe">local_cafe</span>
+</div>
+<div>
+<h3 class="text-body-lg font-headline-sm text-[#0F172A] leading-tight">Kopi &amp; Camilan</h3>
+<p class="text-body-sm font-body-sm text-secondary pt-0.5">20 Okt 2023, 16:45</p>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="text-headline-sm font-headline-sm text-tertiary-container">- Rp 20.000</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-[#F1F5F9]">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-container text-primary">
+              Makanan
+            </span>
+<button class="inline-flex items-center gap-1 text-label-md font-label-md text-primary hover:text-primary-container transition-colors py-1 active:scale-95">
+<span>Lihat detail</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- Card 5: Parkir & Keperluan Kasual -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[20px]" data-icon="more_horiz">more_horiz</span>
+</div>
+<div>
+<h3 class="text-body-lg font-headline-sm text-[#0F172A] leading-tight">Parkir &amp; Keperluan Kasual</h3>
+<p class="text-body-sm font-body-sm text-secondary pt-0.5">19 Okt 2023, 11:20</p>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="text-headline-sm font-headline-sm text-tertiary-container">- Rp 10.000</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-[#F1F5F9]">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-secondary">
+              Tanpa kategori
+            </span>
+<button class="inline-flex items-center gap-1 text-label-md font-label-md text-primary hover:text-primary-container transition-colors py-1 active:scale-95">
+<span>Lihat detail</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</article>
+</section>
+</main>
+<!-- BottomNavBar (from Shared Components JSON) -->
+<!-- Active State: 'Beranda' (matches current screen context) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-4 bg-surface-container-lowest shadow-md max-w-[390px] mx-auto right-0">
+<!-- Nav Item 1: Beranda (Active) -->
+<a class="flex flex-col items-center justify-center text-primary-container font-semibold active:scale-95 transition-transform duration-150 py-1 flex-1" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="home">home</span>
+<span class="text-label-sm font-label-sm mt-0.5">Beranda</span>
+</a>
+<!-- Nav Item 2: Riwayat (Inactive) -->
+<a class="flex flex-col items-center justify-center text-secondary hover:text-primary-container transition-colors active:scale-95 transition-transform duration-150 py-1 flex-1" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="receipt_long">receipt_long</span>
+<span class="text-label-sm font-label-sm mt-0.5">Riwayat</span>
+</a>
+<!-- Nav Item 3: Tambah (Inactive) -->
+<a class="flex flex-col items-center justify-center text-secondary hover:text-primary-container transition-colors active:scale-95 transition-transform duration-150 py-1 flex-1" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="add_circle">add_circle</span>
+<span class="text-label-sm font-label-sm mt-0.5">Tambah</span>
+</a>
+<!-- Nav Item 4: Laporan (Inactive) -->
+<a class="flex flex-col items-center justify-center text-secondary hover:text-primary-container transition-colors active:scale-95 transition-transform duration-150 py-1 flex-1" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="pie_chart">pie_chart</span>
+<span class="text-label-sm font-label-sm mt-0.5">Laporan</span>
+</a>
+</nav>
+</div>
+</body></html>

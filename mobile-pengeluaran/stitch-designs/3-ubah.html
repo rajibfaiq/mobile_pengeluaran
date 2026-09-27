@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=390, height=844, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Ubah Pengeluaran - Catatan Pengeluaran</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-variant": "#e0e3e1", "tertiary-fixed-dim": "#ffb598", "secondary-fixed": "#c8e9e4", "on-primary-container": "#a3faef", "outline-variant": "#bdc9c6", "surface-container-highest": "#e0e3e1", "primary-fixed": "#9cf2e8", "on-error": "#ffffff", primary: "#005c55", "surface-container-low": "#f1f4f3", "on-surface": "#181c1c", surface: "#f7faf8", "on-background": "#181c1c", "on-surface-variant": "#3e4947", "surface-container-high": "#e5e9e7", "secondary-fixed-dim": "#accdc8", "on-primary-fixed": "#00201d", background: "#f7faf8", "surface-container": "#ebefed", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#ffe5db", "on-secondary-fixed": "#00201d", "tertiary-fixed": "#ffdbce", error: "#ba1a1a", tertiary: "#7f4025", "on-tertiary-fixed-variant": "#72361b", "on-secondary": "#ffffff", "primary-container": "#0f766e", "on-error-container": "#93000a", "primary-fixed-dim": "#80d5cb", "on-tertiary-fixed": "#370e00", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#2e4c48", "inverse-surface": "#2d3130", "tertiary-container": "#9c573a", "on-secondary-container": "#4a6864", "surface-bright": "#f7faf8", "on-primary-fixed-variant": "#00504a", outline: "#6e7977", "surface-dim": "#d7dbd9", "on-primary": "#ffffff", "inverse-on-surface": "#eef1f0", secondary: "#466460", "secondary-container": "#c5e6e1", "inverse-primary": "#80d5cb", "surface-tint": "#006a63", "error-container": "#ffdad6"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"space-lg": "1.5rem", "space-xl": "2rem", gutter: "1rem", "space-xs": "0.25rem", "space-md": "1rem", margin: "1rem", "space-sm": "0.5rem"}, fontFamily: {"headline-md": ["Inter"], "display-currency": ["Inter"], "headline-lg": ["Inter"], "body-sm": ["Inter"], "label-lg": ["Inter"], "headline-sm": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {"headline-md": ["20px", {lineHeight: "28px", fontWeight: "600"}], "display-currency": ["32px", {lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-lg": ["24px", {lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700"}], "body-sm": ["12px", {lineHeight: "16px", fontWeight: "400"}], "label-lg": ["14px", {lineHeight: "20px", fontWeight: "600"}], "headline-sm": ["16px", {lineHeight: "24px", fontWeight: "600"}], "label-sm": ["10px", {lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600"}], "body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}], "label-md": ["12px", {lineHeight: "16px", fontWeight: "500"}]}}}};</script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#F8FAFC] text-on-surface antialiased font-body-md flex justify-center items-start min-h-screen">
+<!-- Mobile Constraint Container (390px by 844px canvas target) -->
+<div class="w-[390px] min-h-[844px] bg-[#F8FAFC] flex flex-col relative shadow-2xl overflow-hidden pb-8">
+<!-- Top App Bar / Header (Sub-page linear flow with Back Navigation, Shell Navigation Suppressed) -->
+<header class="sticky top-0 z-40 flex items-center justify-between h-14 px-4 w-full bg-surface-container-lowest shadow-sm">
+<div class="flex items-center space-x-3">
+<button aria-label="Kembali" class="w-10 h-10 -ml-1 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors active:scale-95 duration-150" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h1 class="text-headline-sm font-headline-sm text-on-surface tracking-tight">Ubah Pengeluaran</h1>
+</div>
+<div class="flex items-center">
+<span class="px-2 py-0.5 rounded text-[11px] font-label-md font-semibold bg-secondary-container text-on-secondary-container tracking-wide uppercase">
+          ID: #EXP-8291
+        </span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-4 py-4 space-y-4 overflow-y-auto">
+<!-- REST API Notice / Context Banner -->
+<div class="flex items-start gap-3 p-3 bg-surface-container-low border border-outline-variant rounded-lg">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">info</span>
+<div class="text-[12px] leading-4 text-on-surface-variant">
+<span class="font-semibold text-on-surface">REST API Validasi:</span> Hanya judul dan nominal mentah yang diizinkan untuk diedit pada entitas transaksi ini.
+        </div>
+</div>
+<!-- Main Form Card -->
+<form class="bg-surface-container-lowest border border-[#CBD5E1] rounded-lg p-4 space-y-4 shadow-sm" id="editExpenseForm" onsubmit="event.preventDefault();">
+<!-- 1. EDITABLE FIELD: Judul Pengeluaran -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="expense-title">
+              Judul Pengeluaran <span class="text-error">*</span>
+</label>
+<span class="text-[11px] text-primary font-medium">Dapat diedit</span>
+</div>
+<div class="relative">
+<input class="w-full h-12 px-3.5 bg-surface-container-lowest border border-primary-container text-on-surface font-body-md text-body-md rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-container/20 transition-all placeholder:text-outline" id="expense-title" name="title" placeholder="Contoh: Makan Siang" required="" type="text" value="Makan Siang Nasi Padang"/>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 text-primary pointer-events-none">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</div>
+</div>
+</div>
+<!-- 2. EDITABLE FIELD: Nominal (Rp) - Raw Numeric according to REST API spec -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="expense-amount">
+              Nominal (Rp) <span class="text-error">*</span>
+</label>
+<span class="text-[11px] text-secondary">Raw format per API</span>
+</div>
+<div class="relative flex items-center">
+<span class="absolute left-3.5 text-secondary font-semibold text-body-md select-none">
+              Rp
+            </span>
+<input class="w-full h-12 pl-11 pr-3.5 bg-surface-container-lowest border border-[#CBD5E1] text-on-surface font-headline-sm text-headline-sm rounded-lg focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 focus:outline-none transition-all placeholder:text-outline" id="expense-amount" name="amount" placeholder="0" required="" step="1" type="number" value="28000"/>
+</div>
+<p class="text-body-sm text-body-sm text-secondary">Nilai numerik mentah tanpa separator titik/koma sesuai spesifikasi server.</p>
+</div>
+<!-- DIVIDER -->
+<div class="border-t border-[#CBD5E1] pt-1">
+<span class="text-[11px] font-semibold text-outline uppercase tracking-wider">Parameter Terkunci (Sistem)</span>
+</div>
+<!-- 3. LOCKED FIELD: Kategori -->
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md text-secondary font-medium flex items-center gap-1">
+            Kategori
+            <span class="material-symbols-outlined text-[14px] text-outline">lock</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-12 pl-3.5 pr-10 bg-[#F1F5F9] border border-[#CBD5E1] text-[#94A3B8] font-body-md text-body-md rounded-lg cursor-not-allowed select-none" disabled="" readonly="" type="text" value="Makanan (CAT-002) - Terkunci oleh sistem"/>
+<div class="absolute right-3.5 text-[#94A3B8] flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-body-sm text-body-sm text-[#94A3B8]">
+<span class="material-symbols-outlined text-[14px]">info</span>
+<span>Kategori tidak dapat diubah setelah dibuat</span>
+</div>
+</div>
+<!-- 4. LOCKED FIELD: Tanggal Transaksi -->
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md text-secondary font-medium flex items-center gap-1">
+            Tanggal Transaksi
+            <span class="material-symbols-outlined text-[14px] text-outline">lock</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-12 pl-3.5 pr-10 bg-[#F1F5F9] border border-[#CBD5E1] text-[#94A3B8] font-body-md text-body-md rounded-lg cursor-not-allowed select-none" disabled="" readonly="" type="text" value="2023-10-24 12:30:00 (Otomatis Server)"/>
+<div class="absolute right-3.5 text-[#94A3B8] flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+</div>
+</div>
+<!-- 5. LOCKED FIELD: Catatan -->
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md text-secondary font-medium flex items-center gap-1">
+            Catatan
+            <span class="material-symbols-outlined text-[14px] text-outline">lock</span>
+</label>
+<div class="relative">
+<textarea class="w-full p-3.5 pr-10 bg-[#F1F5F9] border border-[#CBD5E1] text-[#94A3B8] font-body-md text-body-md rounded-lg cursor-not-allowed resize-none select-none" disabled="" readonly="" rows="2">Belum ada catatan</textarea>
+<div class="absolute right-3.5 top-3.5 text-[#94A3B8] pointer-events-none">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+</div>
+</div>
+</form>
+<!-- AUDIT METADATA CARD -->
+<div class="p-3 rounded-lg bg-surface-container-lowest border border-[#CBD5E1] flex items-center justify-between text-body-sm text-secondary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">history</span>
+<span>Versi Entitas: <strong>v1.4</strong></span>
+</div>
+<div class="text-[11px] text-outline">
+          Sync Status: Aktif
+        </div>
+</div>
+</main>
+<!-- ACTION BUTTON GROUP (Fixed Mobile Bottom Safe Bar) -->
+<div class="mt-auto px-4 pt-2 pb-6 w-full bg-[#F8FAFC] space-y-2.5">
+<!-- Primary Save Action Button -->
+<button class="w-full h-12 min-h-[48px] bg-primary-container hover:bg-[#1D4ED8] active:bg-[#1D4ED8] active:scale-[0.98] text-white font-label-lg text-label-lg rounded-lg shadow-sm flex items-center justify-center gap-2 transition-all duration-150" form="editExpenseForm" type="submit">
+<span class="material-symbols-outlined text-[20px]">save</span>
+<span>Simpan Perubahan</span>
+</button>
+<!-- Secondary Cancel Button -->
+<button class="w-full h-12 min-h-[48px] bg-surface-container-lowest hover:bg-surface-container-high active:bg-surface-container active:scale-[0.98] border border-[#CBD5E1] text-secondary font-label-lg text-label-lg rounded-lg flex items-center justify-center transition-all duration-150" type="button">
+        Batal
+      </button>
+</div>
+</div>
+</body></html>
